@@ -57,4 +57,24 @@ ip a
 ping 8.8.8.8
 ```
 
+```bash
+network:
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      addresses:
+        - 192.168.29.5/24
+      routes:
+        - to: default
+          via: 192.168.29.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+  version: 2
+remove 50 cloud init file & create new file and paste above content 
+
+for static ip  (Anuj static ip)
+```
 
